@@ -16,8 +16,8 @@ const Index = () => {
       setCopiedRune(rune);
       
       toast({
-        title: "Copied to clipboard",
-        description: `Rune: ${rune}`,
+        title: "Copied",
+        description: `${rune}`,
         duration: 2000,
       });
       
@@ -35,16 +35,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Runic Symbol Copier</h1>
-          <p className="text-gray-600 max-w-lg mx-auto">
-            Click on any rune to instantly copy it to your clipboard. Perfect for writers, designers, and Norse mythology enthusiasts.
-          </p>
-        </header>
-
-        <div className="bg-white rounded-2xl shadow-sm p-6 mb-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-4 flex items-center justify-center">
+      <div className="w-full max-w-4xl">
+        <div className="bg-white rounded-2xl shadow-sm p-6">
           <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-3">
             {runeList.map((rune, index) => (
               <button
@@ -67,11 +60,6 @@ const Index = () => {
             ))}
           </div>
         </div>
-
-        <footer className="text-center text-gray-500 text-sm">
-          <p>Created for writers, gamers, and rune enthusiasts.</p>
-          <p className="mt-1">Click any rune to copy it to your clipboard.</p>
-        </footer>
       </div>
     </div>
   );
